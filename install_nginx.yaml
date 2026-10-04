@@ -1,5 +1,6 @@
 - name: Install nginx through playbook
   hosts: frontend
+  become: yes
   tasks:
   - name: Install nginx package
     ansible.builtin.package:
