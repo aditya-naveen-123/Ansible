@@ -1,5 +1,5 @@
 - name: ping the server
-  host: frontend #target server also called as inventory
+  hosts: frontend #target server also called as inventory
   tasks: 
   - name: ping
     ping:  #module/collections
