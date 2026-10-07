@@ -19,11 +19,11 @@
   taks:
     - name: Install nginx
       package:
-        - name: nginx
-          state: present
+        name: nginx
+        state: present
     - name: Starting nginx
       service: 
-        - name: nginx
-          state: started
+        name: nginx
+        state: started
 
 
