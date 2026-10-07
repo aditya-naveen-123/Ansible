@@ -1,0 +1,10 @@
+- name: "checking conditionals"
+  hosts: local
+  connection: local
+  vars:
+    live_sessions: 6
+  tasks:
+  - name: "Is more than 5 sessions"
+    debug:
+      msg: "Yes, took more than 5 sessions"
+    when: live_sessions > 5
