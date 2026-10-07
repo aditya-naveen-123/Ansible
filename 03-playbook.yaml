@@ -13,3 +13,17 @@
       debug:
         msg: "Iam debug with name"
 
+- name: Instaling and starting nginx
+  hosts: frontend
+  become: yes
+  taks:
+    - name: Install nginx
+      package:
+        - name: nginx
+          state: present
+    - name: Starting nginx
+      service: 
+        - name: nginx
+          state: started
+
+
