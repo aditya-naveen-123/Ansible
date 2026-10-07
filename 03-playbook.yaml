@@ -2,28 +2,28 @@
   hosts: frontend
   become: yes
   tasks:
-    - name: Debugging
-      debug:
-        msg: "Iam with name"
+  - name: Debugging
+    debug:
+      msg: "Iam with name"
 
 - name: Checking print statements
   hosts: frontend
   become: yes
   tasks:
-    - debug:
-        msg: "Iam with out name"
+  - debug:
+      msg: "Iam with out name"
 
 
 - name: Installing and starting nginx
   hosts: frontend
   become: yes
   tasks:
-    - name: installing nginx
-      package:
-        name: nginx
-        state: present
-    - name: starting nginx
-      service:
-        name: nginx
-        state: started
+  - name: installing nginx
+    package:
+      name: nginx
+      state: present
+  - name: starting nginx
+    service:
+      name: nginx
+      state: started
 
