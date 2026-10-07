@@ -1,0 +1,6 @@
+- name: Connecting to server
+  hosts: frontend
+  become: yes
+  tasks:
+  debug:
+    msg: "Iam playbook-03"
