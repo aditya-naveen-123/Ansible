@@ -2,5 +2,5 @@
   hosts: frontend
   become: yes
   tasks:
-  debug:
-    msg: "Iam playbook-03"
+    debug:
+      msg: "Iam playbook-03"
