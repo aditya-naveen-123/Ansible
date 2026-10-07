@@ -10,4 +10,4 @@
     - debug:
         msg: "Iam {{LEARNER}} Learning {{COURSE}} expected to be completed in {{DURATION}} targeting for {{TARGET}}"
 
-      
+        
