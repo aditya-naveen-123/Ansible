@@ -1,0 +1,22 @@
+- name: data types info
+  hosts: local
+  connection: local
+  vars:
+    course: "DevSecOps" #string
+    duration: 150 #number
+    is_live: true #boolean
+    topics: 
+    - ansible
+    - linux
+    more_details:
+      months: "5"
+      learner: "Aditya"
+  tasks:
+  - name: print data types
+    debug:
+      msg: |
+        name: {{course}}
+        duration: {{duration}}
+        is_live: {{is_live}}
+        topics: {{topics}}
+        more_details: {{more_details}}
