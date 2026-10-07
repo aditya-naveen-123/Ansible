@@ -1,28 +1,28 @@
-- name: Connecting and checking print statement
+- name: Checking print statements
   hosts: frontend
   become: yes
   tasks:
-  - debug:
-      msg: "Iam debug without name"
-
-- name: Connecting with name debug
-  hosts: frontend
-  become: yes
-  tasks:
-    - name: Debug with name
+    - name: Debugging
       debug:
-        msg: "Iam debug with name"
+        msg: "Iam with name"
 
-
-- name: Instaling and starting nginx
+- name: Checking print statements
   hosts: frontend
   become: yes
   tasks:
-    - name: Install nginx
+    debug:
+      msg: "Iam with out name"
+
+- name: Installing and starting nginx
+  hosts: frontend
+  become: yes
+  tasks:
+    - name: installing nginx
       package:
         name: nginx
         state: present
-    - name: Starting nginx
-      service: 
+    - name: starting nginx
+      service:
         name: nginx
         state: started
+
