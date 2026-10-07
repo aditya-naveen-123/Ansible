@@ -1,0 +1,8 @@
+- name: command line argument vars
+  hosts: local
+  connection: local
+  tasks:
+  - name: print command line args
+    debug:
+      msg: "Hello, My name is {{name}}"
+      
