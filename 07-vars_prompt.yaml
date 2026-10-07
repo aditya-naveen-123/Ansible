@@ -3,10 +3,12 @@
   connection: local
   vars_prompt:
     - name: username
-      Prompt: Please enter valid user name
+      prompt: Please enter valid user name
       private: false
     
     - name: password
-      Prompt: please enter your password here
+      prompt: please enter your password here
       private: true
-  
+  tasks:
+  - debug:
+      msg: "Username is {{username}} and password is {{password}}"
