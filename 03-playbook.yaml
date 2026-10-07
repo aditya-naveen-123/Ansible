@@ -4,3 +4,14 @@
   tasks:
   - debug:
       msg: "Iam playbook-03"
+
+- name: Installing and starting nginx server
+  hosts: frontend
+  become: yes
+  tasks:
+    package:
+      - name: nginx
+        state: present 
+    service:
+      - name: nginx
+        state: started
