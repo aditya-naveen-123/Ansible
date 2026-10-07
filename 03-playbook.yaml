@@ -1,20 +1,15 @@
-- name: Connecting to server
+- name: Connecting and checking print statement
   hosts: frontend
   become: yes
   tasks:
   - debug:
-      msg: "Iam playbook-03"
+      msg: "Iam debug without name"
 
-- name: Installing and starting nginx server
+- name: Connecting with name debug
   hosts: frontend
   become: yes
   tasks:
-    - name: Install nginx
-      package:
-        name: nginx
-        state: present 
+    - name: Debug with name
+      debug:
+        msg: "Iam debug with name"
 
-    - name: Starting nginx
-      service:
-        name: nginx
-        state: started
