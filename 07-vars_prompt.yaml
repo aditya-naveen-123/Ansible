@@ -9,6 +9,4 @@
     - name: password
       Prompt: please enter your password here
       private: true
-  tasks:
-  - debug:
-      msg: "Username is {{username}} and password is {{password}}"
+  
