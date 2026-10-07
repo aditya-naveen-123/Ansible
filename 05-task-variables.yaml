@@ -7,5 +7,5 @@
         COURSE: DevSecOps
         DURATION: 5 momths
         LEARNER: Aditya
-        debug:
-          msg: "Hi Iam {{LEARNER}} Learning {{COURSE}} and the duration is {{DURATION}}"
+      debug:
+        msg: "Hi Iam {{LEARNER}} Learning {{COURSE}} and the duration is {{DURATION}}"
