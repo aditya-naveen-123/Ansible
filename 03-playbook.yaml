@@ -10,8 +10,8 @@
   hosts: frontend
   become: yes
   tasks:
-    debug:
-      msg: "Iam with out name"
+    - debug:
+        msg: "Iam with out name"
 
 - name: Installing and starting nginx
   hosts: frontend
