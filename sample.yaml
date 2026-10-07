@@ -1,6 +1,0 @@
-- name: Sample
-  hosts: frontend
-  tasks:
-  - name: debug
-    debug:
-      msg: "New indent"

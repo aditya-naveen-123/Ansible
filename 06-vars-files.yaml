@@ -1,0 +1,10 @@
+- name: vars files demo
+  hosts: local
+  connection: local
+  tasks:
+  - name: Var files demo
+    vars_files:
+      - vars_course.yaml
+    debug:
+      msg: "Iam {{LEARNER}} learning course {{COURSE}} and the DURATION was {{DURATION}}"
+    
