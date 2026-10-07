@@ -1,0 +1,11 @@
+- name: Task level variables
+  hosts: frontend
+  become: yes
+  tasks:
+    - name: Task level vars demo
+      vars:
+        COURSE: DevSecOps
+        DURATION: 5 momths
+        LEARNER: Aditya
+        debug:
+          msg: "Hi Iam {{LEARNER}} Learning {{COURSE}} and the duration is {{DURATION}}"
