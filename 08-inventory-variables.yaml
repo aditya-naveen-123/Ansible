@@ -1,0 +1,6 @@
+- name: inventory variables
+  hosts: local
+  connection: local
+  tasks:
+  - debug:
+      msg: "Iam {{LEARNER}} learning course {{COURSE}} and the DURATION was {{DURATION}}"
