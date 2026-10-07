@@ -9,12 +9,12 @@
   hosts: frontend
   become: yes
   tasks:
-  - name: Install nginx
-    package:
-      name: nginx
-      state: present 
+    - name: Install nginx
+      package:
+        name: nginx
+        state: present 
 
-  - name: Starting nginx
-    service:
-      - name: nginx
-        state: started
+    - name: Starting nginx
+      service:
+        - name: nginx
+          state: started
