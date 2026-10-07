@@ -13,10 +13,11 @@
       debug:
         msg: "Iam debug with name"
 
+
 - name: Instaling and starting nginx
   hosts: frontend
   become: yes
-  taks:
+  tasks:
     - name: Install nginx
       package:
         name: nginx
@@ -25,5 +26,3 @@
       service: 
         name: nginx
         state: started
-
-
