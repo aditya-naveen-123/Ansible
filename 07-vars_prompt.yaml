@@ -1,0 +1,14 @@
+- name: Prompt variables
+  hosts: local
+  connection: local
+  vars_prompt:
+    - name: username
+      Prompt: Please enter valid user name
+      private: false
+    
+    - name: password
+      Prompt: please enter your password here
+      private: true
+
+    - debug:
+        msg: "Username is {{username}} and password is {{password}}"
