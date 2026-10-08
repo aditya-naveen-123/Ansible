@@ -9,4 +9,5 @@
       msg: "Topics are: {{topics | split(',')}}"
 
   - name: Default variable value
-    msg : "Hi {{Greeting | default('Hello')}}"
+    debug:
+      msg : "Hi {{Greeting | default('Hello')}}"
