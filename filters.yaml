@@ -1,0 +1,9 @@
+- name: filters in ansible
+  hosts: local
+  connection: local
+  vars:
+    topics: "Linux,Ansinble,Docker,Terraform"
+  tasks:
+  - name: Convert string to list
+    debug:
+      msg: "Topics are: {{topics | split(',')}}"
