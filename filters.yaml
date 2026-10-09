@@ -4,9 +4,9 @@
   vars:
     topics: "Linux,Ansinble,Docker,Terraform"
     tagmap:
-      - name: ansible
-      -  project: roboshop
-      - environment: dev
+      name: ansible
+      project: roboshop
+      environment: dev
   tasks:
   - name: Convert string to list
     debug:
