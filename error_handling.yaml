@@ -1,0 +1,11 @@
+#ansible allows us to shell commands when we do no have any existing methods/modules  in place to use
+
+#we can use shell commands in two ways.
+# 1. shell module - we get complete shell env, like variables,pipes,redirections etc..
+#2. command module - we don not get anything , just command will be executed.
+- name: Error handling tutorial
+  hosts: local
+  connection: local
+  tasks:
+  - name: command mode test
+    command: cat /etc/passwd | grep root
