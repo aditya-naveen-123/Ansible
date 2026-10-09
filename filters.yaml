@@ -37,5 +37,5 @@
       msg: "{{tagmap | dict2items}}"
 
   - name: convert list to dict2items
-  debug:
-    msg: "{{taglist | items2dict}}"
+    debug:
+      msg: "{{taglist | items2dict}}"
