@@ -23,6 +23,7 @@
         }
     ]
     full_name: aditya naveen muddana
+    ip_address: 123.456.789.45
 
   tasks:
   - name: Convert string to list
@@ -44,3 +45,7 @@
   - name: converting full name to upper case
     debug:
       msg: "{{full_name | upper }}"
+
+  - name: check ipv4 is valid
+    debug:
+      msg: "{{ip_address | ansible.utils.ipv4}}"
