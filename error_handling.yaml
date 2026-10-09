@@ -14,4 +14,4 @@
 
   - name: print the users ouput run through shell command.
     debug:
-    msg: "Users information from command is {{users_output}}"
+      msg: "Users information from command is {{users_output}}"
