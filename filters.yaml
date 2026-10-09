@@ -40,7 +40,7 @@
   - name: convert list to dict2items
     debug:
       msg: "{{taglist | items2dict}}"
-      
+
   - name: converting full name to upper case
-    dbug:
+    debug:
       msg: "{{full_name | uppercase}}"
