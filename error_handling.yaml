@@ -1,25 +1,10 @@
-#ansible allows us to shell commands when we do no have any existing methods/modules  in place to use
-
-#we can use shell commands in two ways.
-# 1. shell module - we get complete shell env, like variables,pipes,redirections etc..
-#2. command module - we don not get anything , just command will be executed.
-- name: Error handling tutorial
+- name: Ignore errors handling
   hosts: local
   connection: local
   tasks:
-  - name: command mode test
-    #command: cat /etc/passwd | grep root
-    shell: cat /etc/passwd | grep root
-    register: users_output
-
-  - name: print the users ouput run through shell command.
+  - name: command error handling
+    command: id roboshop
+    register: user_output
+    ignore_errors: true
     debug:
-      msg: "Users information from command is {{users_output}}"
-
-  - name: list files 
-    shell: ls -ltr > /tmp/files.txt
-    register: tmp_files_output
-
-  - name: printing the temp files information
-    debug:
-      msg: "{{tmp_files_output}}"
+      msg: {{user_output}}
