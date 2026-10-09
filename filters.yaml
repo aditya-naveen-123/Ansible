@@ -22,6 +22,7 @@
             "value": "dev"
         }
     ]
+    full_name: aditya naveen muddana
 
   tasks:
   - name: Convert string to list
@@ -39,3 +40,7 @@
   - name: convert list to dict2items
     debug:
       msg: "{{taglist | items2dict}}"
+      
+  - name: converting full name to upper case
+    dbug:
+      msg: "{{full_name | uppercase}}"
