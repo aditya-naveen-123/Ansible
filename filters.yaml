@@ -23,7 +23,7 @@
         }
     ]
     full_name: aditya naveen muddana
-    ip_address: 123.456.789.45
+    ip_address: 54.174.47.23
 
   tasks:
   - name: Convert string to list
