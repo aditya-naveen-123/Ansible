@@ -10,3 +10,8 @@
   - name: command mode test
     #command: cat /etc/passwd | grep root
     shell: cat /etc/passwd | grep root
+    register: users_output
+
+  - name: print the users ouput run through shell command.
+    debug:
+    msg: "Users information from command is {{users_output}}"
