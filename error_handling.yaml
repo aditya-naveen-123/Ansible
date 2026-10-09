@@ -8,4 +8,5 @@
   connection: local
   tasks:
   - name: command mode test
-    command: cat /etc/passwd | grep root
+    #command: cat /etc/passwd | grep root
+    shell: cat /etc/passwd | grep root
