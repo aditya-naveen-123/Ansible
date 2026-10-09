@@ -6,5 +6,7 @@
     command: id roboshop
     register: user_output
     ignore_errors: true
+
+  - name: printing errors
     debug:
       msg: "{{user_output}}"
