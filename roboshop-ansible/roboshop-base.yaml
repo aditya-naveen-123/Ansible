@@ -4,7 +4,7 @@
   vars:
     instances: ["mongodb", "redis", "mysql", "rabbitmq"]
     image_id: "ami-0220d79f3f480ecf5"
-    domain_name: "aditya.builds.fun"
+    domain_name: "adityabuilds.fun"
   tasks:
   - name: create EC2 instances from list
     amazon.aws.ec2_instance:
