@@ -7,6 +7,22 @@
       name: ansible
       project: roboshop
       environment: dev
+    taglist:
+      [
+        {
+            "key": "name",
+            "value": "ansible"
+        },
+        {
+            "key": "project",
+            "value": "roboshop"
+        },
+        {
+            "key": "environment",
+            "value": "dev"
+        }
+    ]
+
   tasks:
   - name: Convert string to list
     debug:
@@ -19,3 +35,6 @@
   - name: convert map to list
     debug:
       msg: "{{tagmap | dict2items}}"
+
+  - name: convert list to dict2items
+    msg: "{{taglist | items2dict}}"
