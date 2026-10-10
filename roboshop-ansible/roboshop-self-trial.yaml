@@ -62,7 +62,7 @@
       #wait: false
     loop: "{{instances}}"
     when: 
-    - item.item != 'frontend'
+    - item != 'frontend'
     - task_to_perform == "delete"
 
   - name: Deleting R53 for frontend
@@ -76,7 +76,7 @@
       #wait: false
     loop: "{{instances}}"
     when: 
-    - item.item == 'frontend'
+    - item == 'frontend'
     - task_to_perform == "delete"
 
   - name: Deleting Ec2 instances
