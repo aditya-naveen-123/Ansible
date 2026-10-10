@@ -14,7 +14,7 @@
       instance_type: t3.micro
       image_id: "{{ image_id }}"
       security_groups: 
-        - "{{project}}-item"
+        - "{{project}}-{{item}}"
         - "{{project}}-common"
       wait: false
     loop: "{{instances}}"
