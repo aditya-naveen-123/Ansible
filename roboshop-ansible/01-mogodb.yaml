@@ -1,0 +1,21 @@
+- name: creating and hosting mongodb
+  hosts: mongodb
+  become: yes
+  tasks:
+  - name: coying mongo repo to the destination
+    copy: 
+      src: mongo.repo
+      dest: /etc/yum.repos.d/mongo.repo
+
+  - name: install mongo db package
+    package:
+      name: mongodb-org
+      state: present
+  - name: starting and enabling mongodb
+    service:
+      name: mongod
+      state: installed
+      enabled: yes
+
+
+
