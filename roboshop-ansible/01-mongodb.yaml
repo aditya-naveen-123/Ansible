@@ -2,9 +2,9 @@
   hosts: mongodb
   become: yes
   tasks:
-  - name: coying mongo repo to the destination
+  - name: copying mongo repo to the destination
     copy: 
-      src: mongo.repo
+      src: Ansible/roboshop-ansible/mongo.repo
       dest: /etc/yum.repos.d/mongo.repo
       remote_src: true
 
